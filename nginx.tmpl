@@ -98,7 +98,7 @@ upstream {{ $host }} {
 {{ $certName := (first (groupByKeys $containers "Env.CERT_NAME")) }}
 
 {{/* Get the virtual host additionals config defined by containers w/ the same vhost */}}
-{{ $vhostConfig := (split (first (groupByKeys $containers "Env.VIRTUAL_HOST_CONFIG")) "|" ) }}
+{{ $vhostConfig := (split (coalesce (first (groupByKeys $containers "Env.VIRTUAL_HOST_CONFIG")) "") "|" ) }}
 
 {{/* Get the best matching cert  by name for the vhost. */}}
 {{ $vhostCert := (closest (dir "/etc/nginx/certs") (printf "%s.crt" $host))}}
