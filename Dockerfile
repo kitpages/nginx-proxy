@@ -1,4 +1,4 @@
-FROM nginx:1.9.6
+FROM nginx:1.9
 MAINTAINER Elie Charra <elie.charra [at] kitpages.fr>
 
 # Install wget and install/updates certificates
