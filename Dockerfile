@@ -1,5 +1,5 @@
 FROM nginx:1.9.6
-MAINTAINER Jason Wilder mail@jasonwilder.com
+MAINTAINER Elie Charra <elie.charra [at] kitpages.fr>
 
 # Install wget and install/updates certificates
 RUN apt-get update \
