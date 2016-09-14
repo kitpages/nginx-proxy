@@ -1,5 +1,5 @@
 FROM nginx:1.9
-MAINTAINER Elie Charra <elie.charra [at] kitpages.fr>
+MAINTAINER Elie Charra <elie.charra [at] kibatic.com>
 
 # Install wget and install/updates certificates
 RUN apt-get -qq update \
